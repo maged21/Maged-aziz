@@ -831,3 +831,10 @@ textarea{
     text-align: center;
   }
 }
+
+@media only screen and (max-width: 767px) {
+  [data-aos], [data-aos][data-aos-easing], [data-aos][data-aos-duration], [data-aos][data-aos-delay] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

@@ -58,7 +58,14 @@ const r = rolly({
   r.init();
 
   AOS.init({
-    disable: false,
     duration: 1500,
     throttleDelay: 99
+  });
+
+  window.addEventListener('load', function() {
+    // Check if the device is a mobile device
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+      // Remove AOS initialization on mobile devices
+      AOS.init({ disable: true });
+    }
   });
