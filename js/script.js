@@ -1,23 +1,3 @@
-// TOGGLE NAV
-const menuToggleButton = document.querySelector('.menu-toggle-button');
-const menuElement = document.querySelector('.menu');
-
-const toggleMenu = () => {
-    menuElement.classList.toggle('active');
-    menuToggleButton.classList.toggle('active');
-};
-
-menuToggleButton.addEventListener('click', toggleMenu);
-
-// REMOVE ACTIVE CLASS
-const removeActiveLinkClass = e => {
-    if(e.target.classList.contains('list-link')){
-        menuElement.classList.remove('active');
-        menuToggleButton.classList.remove('active');
-    } 
-}
-
-document.addEventListener('click', removeActiveLinkClass);
 
 // TOGGLE TEME 
 const themeToggleButton = document.querySelector('.theme-toggle-button');
@@ -50,12 +30,7 @@ input.addEventListener('input', () => {
   }
 });
 
-const r = rolly({
-    view: document.querySelector('.app'),
-    native: true,
-    // other options
-  });
-  r.init();
+
 
   AOS.init({
     duration: 1500,

@@ -38,6 +38,13 @@ body.dark-theme {
     --border-top-color: rgba(255, 255, 255, .1);
 }
 
+.app {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
 a {
   color: inherit !important;
   outline: none !important;
@@ -75,6 +82,9 @@ textarea{
   position: relative;
 }
 /* ------------------------ header */
+#home {
+  height: 100vh;
+}
 
 .header{
   margin-bottom: 5rem;
@@ -97,7 +107,7 @@ textarea{
 .navbar-buttons {
   display: flex;
   column-gap: .5rem;
-  padding: 0 .5rem;
+  padding: 0 .55rem;
   background-color: var(--dark-color);
   color: var(--light-color);
   border-radius: .4rem;
@@ -109,10 +119,38 @@ textarea{
   cursor: pointer;
 }
 
+.toggle-btn {
+  position: absolute;
+  margin: .5em -1em;
+  padding: 1em 2em;
+  width: 40px;
+  height: 12px;
+  /* left: -10px; */
+  z-index: 1;
+  cursor: pointer;
+}
+
+span.one {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: var(--light-color);
+}
+
+span.two {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: var(--light-color);
+  margin-top: .5rem;
+}
+
+
 .icon-button{
   width: 4rem;
   height: 4rem;
   display: flex;
+  margin: 0 0 0 6em;
 }
 
 .icon-button i {
@@ -125,58 +163,36 @@ textarea{
 }
 
 .menu {
-  position: absolute;
-  right: 10.80rem;
-  bottom: 10px;
-  background-color: var(--dark-color);
+  z-index: 10;
+  position: fixed;
+  background: var(--dark-color);
+  height: 100vh;
+  width: 100%;
+  top: -100%;
+}
+
+.data {
+  padding: 15em 0 0 10em;
+  text-align: left;
+}
+
+.data li:first-child {
   color: var(--light-color);
-  border-radius: .4em;
-  padding: .8rem 1.5rem;
-  z-index: -1;
-  pointer-events: none;
-  transform: scale(0);
-  transform-origin: top right;
-  transition: transform .25s .25s cubic-bezier(1, 0, 0, 1);
+  font-family:fantasy;
+  font-size: 24px;
 }
 
-.menu .list{
-  opacity: 0;
-}
-.list{
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
+.data li:not(:first-child) {
+  font-size: 42px;
+  margin-top: 1rem;
 }
 
-.list-link{
-  font-size: 1.4rem !important;
-  color: var(--dark-color);
-}
-
-.list-link:hover,
-.list-link:focus{
-  opacity: .7;
+.data a {
+  color: var(--light-color) !important;
 }
 
 /* javascript styles */
-.active.menu {
-  z-index: initial;
-  pointer-events: initial;
-  transform: scale(1) translateY(4.5rem);
-}
 
-.active.menu > .list {
-  opacity: 1;
-  transition: opacity .1s .5s;
-}
-
-.active .open-icon {
-  display: none;
-}
-
-.active .close-icon{
-  display: block !important;
-}
 
 .dark-theme .logo{
   display: none;
@@ -562,7 +578,7 @@ textarea{
   color: #f3f3f3;
   border: 1px solid #f3f3f3;
   padding: 10px 20px;
-  font-size: 25px;
+  font-size: 15px;
   position: relative;
   border-radius: 5%;
   cursor: pointer;
@@ -714,9 +730,67 @@ textarea{
   background: linear-gradient(to left, transparent, var(--dark-color), transparent);
 }
 
+.footer .social-media .list-item {
+  margin-left: 15px !important;
+}
 
+/* animation preloader */
+.loader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+  z-index: 10000;
+}
 
+.loader .loader-img {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+}
 
+.loader img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #0f0f0f;
+  color: #fff;
+  display: flex;
+  clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+  z-index: 10000;
+}
+
+.shadow {
+  width: 50%;
+  padding: 1em;
+  z-index: 10000;
+}
+
+.overlay h2 {
+  margin: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  font-size: 60px;
+  text-transform: uppercase;
+  line-height: 2;
+}
+
+.shadow:nth-child(2) h2 {
+  font-size: 24px;
+  text-align: right;
+  color: gray;
+  margin-right: 15px;
+}
+
+.shadow:nth-child(2) h2 span {
+  color: #fff;
+}
 
 /* media */
 @media screen and (max-width:1024px) {
@@ -829,6 +903,28 @@ textarea{
 
   .back-top{
     text-align: center;
+  }
+  .overlay{ 
+    display: flex;
+    align-items: center;
+  }
+  .overlay h2 {
+    font-size: 20px;
+  }
+
+  .data {
+    padding: 10em 0 0 5em;
+  }
+  
+  .toggle-btn{
+    padding: 1em 0em;
+    left: 20px;
+  }
+  .icon-button {
+    width: 2em;
+    margin: 0 3px 0px 90px;
+    padding-left: 0 !important;
+    padding: 0 !important;
   }
 }
 
