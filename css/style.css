@@ -767,7 +767,7 @@ span.two {
   z-index: 10000;
 }
 
-.shadow {
+.shadow-section {
   width: 50%;
   padding: 1em;
   z-index: 10000;
@@ -781,14 +781,14 @@ span.two {
   line-height: 2;
 }
 
-.shadow:nth-child(2) h2 {
+.shadow-section:nth-child(2) h2 {
   font-size: 24px;
   text-align: right;
   color: gray;
   margin-right: 15px;
 }
 
-.shadow:nth-child(2) h2 span {
+.shadow-section:nth-child(2) h2 span {
   color: #fff;
 }
 
@@ -815,21 +815,14 @@ span.two {
 
 }
 
-@media screen and (max-width:768px) {
-  
-.menu{
-  right: 3rem;
-}
-}
 
 @media screen and (max-width:625px) {
   .logo{
     width: auto;
   }
   
-  .menu {
-    right: 0.55rem;
-    bottom: -5px;
+  .menu{
+    top: -120%;
   }
 
   .inline-image {
