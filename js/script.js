@@ -19,6 +19,7 @@ const toggleTheme = () => {
 };
 themeToggleButton.addEventListener('click', toggleTheme);
 
+// CONTACT
 const input = document.getElementById('message');
 const label = document.querySelector('.input-label');
 
