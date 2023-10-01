@@ -55,7 +55,7 @@
                    <li><a class="list-link" href="index.html">Home</a></li>
                    <li><a class="list-link" href="./pages/about.html">About</a></li>
                    <li><a class="list-link" href="./pages/portfolio.html">Portfolio</a></li>
-                   <li><a class="list-link" href="#">Contact</a></li>
+                   <li><a class="list-link" href="./pages/contact.html">Contact</a></li>
                </ul>
            </div>
        </div>
@@ -261,53 +261,16 @@
     </section>
 
     <!-- contact -->
-    <section id="contact" class="contact pt-5">
-        <div class="container pb-5" data-aos="zoom-out-up" data-aos-once="true">
-            <div class="section-title-container mb-5">
-                <h1 class="text-uppercase section-title">Get in</h1>
-                <div class="section-subtitle-container">
-                    <span class="subtitle-number has-sparkles">03</span>
-                    <h5 class="section-sub-title text-uppercase">touch</h5>
+    <section id="home-contact" class="home-contact">
+        <div class="container d-flex justify-content-center align-items-center text-center py-5">
+            <div class="row py-5">
+                <h2 class="contact-text">Want to work together?</h2>
+                <h2 class="contact-text">It will be my pleasure to hear from you</h2>
+                <div>
+                    <button class="contact-btn">
+                        <a href="pages/contact.html">Get in touch</a>
+                    </button>
                 </div>
-            </div>
-            <div class="row justify-content-between align-items-center">
-                <div class="col-lg-7">
-                    <div class="about-text">
-                        <p class="text-capitalize">If you have any <span class="fw-bolder">questions</span>, collaboration proposals, or simply wish to discuss potential opportunities, I welcome you to reach out at your convenience. I am readily available and committed to providing timely responses.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="about-img">
-                        <span class="has-sparkles-alt"></span>
-                        <img src="images/get_in_touch.png" class="img-fluid">
-                        <span class="has-sparkles-alt"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="form-container">
-                <form action="" class="contact-form">
-                    <div class="input-form">
-
-                        <div class="input">
-                            <input type="text" id="name" required>
-                            <label for="name" class="input-label fs-4">Name <span class="required-field">*</span></label>
-                        </div>
-
-                        <div class="input">
-                            <input type="text" id="email" required>
-                            <label for="email" class="input-label fs-4">Email <span class="required-field">*</span></label>
-                        </div>
-
-                    </div>
-
-                    <div class="input message">
-                        <input type="text" id="message" required>
-                        <label for="message" class="input-label fs-4">your message <span class="required-field">*</span></label>
-                    </div>
-
-                    <button type="submit" class="button form-button button-fill text-uppercase fs-2">send message</button>
-                </form>
             </div>
         </div>
     </section>
@@ -320,27 +283,27 @@
                     <div class="social-media">
                         <ul class="list ps-0 d-flex">
                             <li class="list-item">
-                                <a href="#" class="list-link">
+                                <a href="https://www.linkedin.com/in/maged-abdulaziz-621782229/" target="_blank">
                                     <i class="bx bxl-linkedin"></i>
                                 </a>
                             </li>
                             <li class="list-item">
-                                <a href="#" class="list-link">
+                                <a href="https://github.com/maged21" target="_blank">
                                     <i class="bx bxl-github"></i>
                                 </a>
                             </li>
                             <li class="list-item">
-                                <a href="#" class="list-link">
+                                <a href="https://www.facebook.com/maged.abdulaziz.54" target="_blank">
                                     <i class="bx bxl-facebook"></i>
                                 </a>
                             </li>
                             <li class="list-item">
-                                <a href="#" class="list-link">
+                                <a href="#" target="_blank">
                                     <i class="bx bxl-instagram"></i>
                                 </a>
                             </li>
                             <li class="list-item">
-                                <a href="#" class="list-link">
+                                <a href="https://www.tiktok.com/@usr999__" target="_blank">
                                     <i class="bx bxl-tiktok"></i>
                                 </a>
                             </li>
@@ -358,13 +321,11 @@
                 </div>
             </div>
         </div>
-
-
     </footer>
 
 </div>    
 
-<div class="loader">
+<!-- <div class="loader">
     <div class="loader-img">
         <img src="images/1.jpg">
     </div>
@@ -393,11 +354,7 @@
     <div class="shadow-section">
         <h2 class="shadow-title"><div><span>Click</span> anywhere to continue</div></h2>
     </div>
-</div>
-
-
-
-
+</div> -->
 
 
 
@@ -415,124 +372,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
-
-    <script>
-        gsap.from(".shadow-title div", 1.5, {
-            yPercent: 100,
-            ease: "power4.inOut",
-            stagger: {
-                amount: 0.5,
-            },
-        });
-
-        gsap.to(".shadow-title", 1.5, {
-            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-            ease: "power4.inOut",
-            stagger: {
-                amount: 0.5
-            },
-        });
-
-        document.addEventListener("DOMContentLoaded",
-        function () {
-            let overlay = document.querySelector(".overlay");
-            overlay.addEventListener("click", function () {
-                gsap.to(".shadow-title div", 1.5, {
-                    yPercent: -100,
-                    ease: "power4.inOut",
-                    stagger: {
-                        amount: 0.5,
-                    },
-                });
-
-                gsap.to(".shadow-title", 1.5, {
-                    clipPath: "polygon(0 85%, 100% 85%, 100% 100%, 0 100%)",
-                    ease: "power4.inOut",
-                    stagger: {
-                        amount: 0.5,
-                    },
-                }, 0);
-                
-                gsap.to(".overlay", 2, {
-                    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-                    ease: "power4.inOut",
-                });
-
-                gsap.to(".loader-img", 2, {
-                    clipPath: "polygon(0 100%, 100% 100%, 100% 0%, 0% 0%)",
-                    ease: "power4.inOut",
-                    stagger: {
-                        amount: 1.5,
-                    },
-                });
-
-                gsap.to(".loader", 2, {
-                    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0 0%)",
-                    ease: "power4.inOut",
-                    delay: 2,
-                });
-            });
-        });
-    </script>
-
-    <script type="text/javascript">
-
-        var t1 = new TimelineMax({paused: true});
-
-        t1.to(".title-one", 0.5, {
-            y: 80,
-            opacity: 0,
-            ease:Expo.easeOut,
-            delay: -1.5
-        }, 0.2);
-
-        t1.to(".title-two", 0.7, {
-            y: 90,
-            opacity: 0,
-            ease:Expo.easeOut,
-            delay: -1.9
-        }, 0.3);
-
-        t1.to(".title-three", 1.2, {
-            y: 100,
-            opacity: 0,
-            ease:Expo.easeOut,
-            delay: -2.5
-        }, 0.4);
-
-        t1.to(".one", 0.8, {
-             y: 6,
-             rotation: 45,
-             ease: Expo.easeInOut
-        });
-        t1.to(".two", 0.8, {
-             y: 1,
-             rotation: -45,
-             ease: Expo.easeInOut,
-             delay: -0.8
-        });
-        
-        t1.to(".menu", 2, {
-             top: "0%",
-             ease: Expo.easeInOut,
-             delay: -2
-        });
-
-        t1.staggerFrom(".menu ul li", 2, {
-            x: -200, 
-            opacity: 0, 
-            ease:Expo.easeOut
-        }, 0.3);
-
-        t1.reverse();
-        $(document).on("click", ".toggle-btn", function() {
-            t1.reversed(!t1.reversed());
-        });
-        $(document).on("click", "a.list-link", function() {
-            t1.reversed(!t1.reversed());
-        });
-        
-    </script>
 
     <!-- script -->
     <script src="js/script.js"></script>

@@ -60,8 +60,58 @@
        </div>
 
 
-    <!-- about -->
-    
+    <!-- contact -->
+    <section id="contact" class="contact pt-5">
+        <div class="container pb-5">
+            <div class="section-title-container mb-5">
+                <h1 class="text-uppercase section-title">Get in</h1>
+                <div class="section-subtitle-container">
+                    <span class="subtitle-number has-sparkles">03</span>
+                    <h5 class="section-sub-title text-uppercase">touch</h5>
+                </div>
+            </div>
+            <div class="row justify-content-between align-items-center">
+                <div class="col-lg-7">
+                    <div class="about-text">
+                        <p class="text-capitalize">If you have any <span class="fw-bolder">questions</span>, collaboration proposals, or simply wish to discuss potential opportunities, I welcome you to reach out at your convenience. I am readily available and committed to providing timely responses.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="about-img">
+                        <span class="has-sparkles-alt"></span>
+                        <img src="../images/get_in_touch.png" class="img-fluid">
+                        <span class="has-sparkles-alt"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-container">
+                <form action="https://formspree.io/f/mleypyyy"
+                method="POST" class="contact-form">
+                    <div class="input-form">
+
+                        <div class="input">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name" class="input-label fs-4">Name <span class="required-field">*</span></label>
+                        </div>
+
+                        <div class="input">
+                            <input type="text" id="email" name="email" required>
+                            <label for="email" class="input-label fs-4">Email <span class="required-field">*</span></label>
+                        </div>
+
+                    </div>
+
+                    <div class="input message">
+                        <input type="text" id="message" name="message" required>
+                        <label for="message" class="input-label fs-4">your message <span class="required-field">*</span></label>
+                    </div>
+
+                    <button type="submit" class="button form-button button-fill text-uppercase fs-2">send message</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
     <!-- footer -->
     <footer class="footer">
@@ -137,5 +187,7 @@
 
     <!-- script -->
     <script src="../js/script.js"></script>
+
+
 </body>
 </html>

@@ -82,12 +82,10 @@ textarea{
   position: relative;
 }
 /* ------------------------ header */
-#home {
-  height: 100vh;
-}
 
-.header{
-  margin-bottom: 5rem;
+
+#hero {
+  padding: 180px 0;
 }
 
 
@@ -668,6 +666,27 @@ span.two {
 }
 
 
+.home-contact{
+  background: var(--dark-color);
+  color: var(--light-color);
+  padding: 220px 0;
+}
+
+.contact-text{
+  font-size: 70px;
+  margin-bottom: 50px;
+}
+
+.contact-btn{
+  font-size: 40px;
+  border-bottom: 2px solid var(--light-color);
+  transition: .5s;
+}
+
+.contact-btn:hover {
+  letter-spacing: 5px;
+  transition: .5s;
+}
 
 /* contact */
 .input-form{
@@ -821,6 +840,10 @@ span.two {
     width: auto;
   }
   
+  #hero {
+    padding: 150px 0;
+  }
+
   .menu{
     top: -120%;
   }
@@ -918,6 +941,9 @@ span.two {
     margin: 0 3px 0px 90px;
     padding-left: 0 !important;
     padding: 0 !important;
+  }
+  .contact-text{
+    font-size: 40px;
   }
 }
 
