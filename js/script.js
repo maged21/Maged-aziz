@@ -76,21 +76,6 @@ themeToggleButton.addEventListener('click', toggleTheme);
 
 
 
-
-
-  AOS.init({
-    duration: 1500,
-    throttleDelay: 99
-  });
-
-  window.addEventListener('load', function() {
-    // Check if the device is a mobile device
-    if (/Mobi|Android/i.test(navigator.userAgent)) {
-      // Remove AOS initialization on mobile devices
-      AOS.init({ disable: true });
-    }
-  });
-
   var t1 = new TimelineMax({paused: true});
 
   t1.to(".title-one", 0.5, {

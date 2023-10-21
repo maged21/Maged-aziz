@@ -947,9 +947,21 @@ span.two {
   }
 }
 
-@media only screen and (max-width: 767px) {
-  [data-aos], [data-aos][data-aos-easing], [data-aos][data-aos-duration], [data-aos][data-aos-delay] {
-    opacity: 1 !important;
-    transform: none !important;
-  }
+/* ---------------- ABOUT PAGE */
+#about-page .section-title-container{
+  position: relative;
+}
+
+#about-page .section-title-container::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to left, transparent, var(--dark-color), transparent);
+  bottom: 0;
+}
+
+#about-page h3 {
+  line-height: 3rem;
 }
