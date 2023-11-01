@@ -53,7 +53,7 @@
                    <li><a class="list-link" href="../index.html">Home</a></li>
                    <li><a class="list-link" href="../pages/about.html">About</a></li>
                    <li><a class="list-link" href="../pages/portfolio.html">Portfolio</a></li>
-                   <li><a class="list-link" href="#">Contact</a></li>
+                   <li><a class="list-link" href="../pages/contact.html">Contact</a></li>
                </ul>
            </div>
        </div>
@@ -69,33 +69,33 @@
 
                 <div class="col-lg-8 col-sm-6 main-project">
                     <div class="image-wrapper">
-                      <img src="../images/projects/agency.png" class="project-image">
+                      <img src="../images/projects/t-shirt.png" class="project-image">
                       <div class="content d-flex gap-4">
-                        <div class="project-btn"><a class="text-uppercase" target="_blank" href="#">website</a></div>
-                        <div class="project-btn"><a class="text-uppercase" target="_blank" href="#">github</a></div>
+                        <div class="project-btn"><a class="text-uppercase" target="_blank" href="https://megz-t-shirt.vercel.app/">website</a></div>
+                        <div class="project-btn"><a class="text-uppercase" target="_blank" href="https://github.com/maged21/T-shirt">github</a></div>
                       </div>
                     </div>
                     <div class="project-details text-start">
-                        <h2 class="text-uppercase fw-bolder mb-4">Website</h2>
+                        <h2 class="text-uppercase fw-bolder mb-4">3D T-shirt</h2>
                         <h5 class="text-capitalize">website details</h5>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-sm-6 main-project">
                     <div class="image-wrapper">
-                      <img src="../images/projects/agency.png" class="project-image">
+                      <img src="../images/projects/beauty.png" class="project-image">
                       <div class="content d-flex gap-4">
-                        <div class="project-btn"><a class="text-uppercase" target="_blank" href="#">website</a></div>
-                        <div class="project-btn"><a class="text-uppercase" target="_blank" href="#">github</a></div>
+                        <div class="project-btn"><a class="text-uppercase" target="_blank" href="https://beauty-salon-megzo.vercel.app/">website</a></div>
+                        <div class="project-btn"><a class="text-uppercase" target="_blank" href="https://github.com/maged21/Beauty-Salon">github</a></div>
                       </div>
                     </div>
                     <div class="project-details text-start">
-                        <h2 class="text-uppercase fw-bolder mb-4">Website</h2>
+                        <h2 class="text-uppercase fw-bolder mb-4">Beauty Salon</h2>
                         <h5 class="text-capitalize">website details</h5>
                     </div>
                 </div>
             </div>
-            <div class="row align-items-center">
+            <!-- <div class="row align-items-center">
 
                 <div class="col-lg-5 col-sm-6 main-project">
                     <div class="image-wrapper">
@@ -124,8 +124,8 @@
                         <h5 class="text-capitalize">website details</h5>
                     </div>
                 </div>
-            </div>
-            <div class="row align-items-center">
+            </div> -->
+            <!-- <div class="row align-items-center">
 
                 <div class="col-lg-8 col-sm-6 main-project">
                     <div class="image-wrapper">
@@ -154,8 +154,8 @@
                         <h5 class="text-capitalize">website details</h5>
                     </div>
                 </div>
-            </div>
-            <div class="row align-items-center">
+            </div> -->
+            <!-- <div class="row align-items-center">
 
                 <div class="col-lg-5 col-sm-6 main-project">
                     <div class="image-wrapper">
@@ -184,7 +184,7 @@
                         <h5 class="text-capitalize">website details</h5>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 
@@ -252,70 +252,9 @@
 
 
     <!-- animation -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-
-
-    <script type="text/javascript">
-
-        var t1 = new TimelineMax({paused: true});
-
-        t1.to(".title-one", 0.5, {
-            y: 80,
-            opacity: 0,
-            ease:Expo.easeOut,
-            delay: -1.5
-        }, 0.2);
-
-        t1.to(".title-two", 0.7, {
-            y: 90,
-            opacity: 0,
-            ease:Expo.easeOut,
-            delay: -1.9
-        }, 0.3);
-
-        t1.to(".title-three", 1.2, {
-            y: 100,
-            opacity: 0,
-            ease:Expo.easeOut,
-            delay: -2.5
-        }, 0.4);
-
-        t1.to(".one", 0.8, {
-             y: 6,
-             rotation: 45,
-             ease: Expo.easeInOut
-        });
-        t1.to(".two", 0.8, {
-             y: 1,
-             rotation: -45,
-             ease: Expo.easeInOut,
-             delay: -0.8
-        });
-        
-        t1.to(".menu", 2, {
-             top: "0%",
-             ease: Expo.easeInOut,
-             delay: -2
-        });
-
-        t1.staggerFrom(".menu ul li", 2, {
-            x: -200, 
-            opacity: 0, 
-            ease:Expo.easeOut
-        }, 0.3);
-
-        t1.reverse();
-        $(document).on("click", ".toggle-btn", function() {
-            t1.reversed(!t1.reversed());
-        });
-        $(document).on("click", "a.list-link", function() {
-            t1.reversed(!t1.reversed());
-        });
-        
-    </script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
 
     <!-- script -->
     <script src="../js/script.js"></script>
